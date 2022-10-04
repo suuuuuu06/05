@@ -2,21 +2,32 @@
 #include <stdlib.h>
 
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
-
 int main(int argc, char *argv[]) {
-
-   int a,i,sum=0;
    
-   printf("input a number : ");
-   scanf("%d",&a);
+   int x,y,result;
+   char a;
    
-   for(i=0;i<=a;i++)
-    {
-    sum+=i;
-    }
+   printf("enter the calculation: ");
+   scanf("%d%c%d",&x,&a,&y);
+   
+   if(a=='+')
+     result= x+y;
     
-    printf("the result is %d",sum); 
+    
+   else if (a=='-')
+     result= x-y;
+    
+    
+    else if (a=='*')
+     result= x*y;
+    
+
+   else
+     result= x/y;
+   
+   printf("=%d",result);
+    
+   
    return 0;
 }
-   
 
